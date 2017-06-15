@@ -1,7 +1,8 @@
 object Main extends App {
 
   def main(): Unit = {
-    val source = args(0)
+    val file = scala.io.Source.fromFile("some.scala")
+    val source = file.mkString
     printAst(getAst(source))
   }
 
